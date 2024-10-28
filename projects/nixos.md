@@ -9,9 +9,11 @@ relationships:
 tags:
     - "dense-note"
     - "project"
+    - "complete"
 ---
 ## Nixos
 A guide to configuring my first Nixos system.
+**Complete** - Although this guide is not perfect, I will not be adding to it. After installing Nixos, I will not document further changes. I will continue to backup config files to github.
 ## Considerations
 ### Installation
 **Purpose** - Install Nixos.
@@ -37,10 +39,9 @@ A guide to configuring my first Nixos system.
   users.users.andrew = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    password = "password"
   };
   ```
-- Basic Packages - `environment.systemPackages = with pkgs; [git networkmanager wpa_supplican dhcpcd nano ];`
+- Basic Packages - `environment.systemPackages = with pkgs; [git networkmanager wpa_supplicant nano nix-env nix-shell];`
 - Finalize Install - `nixos-install`
 - Set root passwd and Reboot
 ### Post Installation
